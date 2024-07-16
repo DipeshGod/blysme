@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     return Response.json({ body });
   } else {
     return Response.json(
-      { error: "Invalid Verification Code" },
+      { error: "Verfication code is invalid" },
       { status: 400 }
     );
   }

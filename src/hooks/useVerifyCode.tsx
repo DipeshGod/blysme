@@ -1,11 +1,15 @@
+import { useToast } from "@/components/ui/use-toast";
 import { VerifyCodePayload } from "@/lib/validators/verificationCode";
-import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export const useVerifyCode = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<VerifyCodePayload>();
   const [error, setError] = useState<string>();
   const [userInput, setUserInput] = useState<number>();
+  const { toast } = useToast();
+  const router = useRouter();
 
   const handleChange = (newValue: string) => {
     const val = Number(newValue);
@@ -18,7 +22,18 @@ export const useVerifyCode = () => {
       body: JSON.stringify({ code }),
     });
 
-    const data = (await response.json()) as VerifyCodePayload;
+    if (response.status === 400) {
+      toast({
+        variant: "destructive",
+        title: "Invalid Verification Code",
+        description: "Please try again.",
+      });
+    }
+
+    if (response.status === 200) {
+      router.push("/success");
+    }
+
     return data;
   };
 

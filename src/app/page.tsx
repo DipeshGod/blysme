@@ -8,9 +8,7 @@ import { ThreeDots } from "react-loader-spinner";
 const numericPattern = "^[0-9]+$";
 
 const Home = () => {
-  const { handleChange, handleSubmit, loading, error } = useVerifyCode();
-
-  console.log(error);
+  const { handleChange, handleSubmit, loading } = useVerifyCode();
 
   return (
     <div className="px-36 text-center py-10">
