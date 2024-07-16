@@ -25,3 +25,14 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### 3. Tech stack used
+
+1. Nextjs for routing and serverless api routes.
+2. Radix headless ui with tailwind for better accessibility and flexible styling
+3. Input Otp for verification code
+4. Playwright for testing
+
+### Some Useful Hints
+
+1. api folder inside "app" directory contains serverless api for serverside logic
