@@ -8,7 +8,10 @@ export async function POST(request: Request) {
   //simulate api response with 2 second timeout, error 30% and success 70% of time
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-  if (body.code.toString().length == 6) {
+  if (
+    body.code.toString().length == 6 &&
+    body.code.toString().slice(-1) != "7"
+  ) {
     return Response.json({ body });
   } else {
     return Response.json(
