@@ -36,3 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Some Useful Hints
 
 1. api folder inside "app" directory contains serverless api for serverside logic
+
+### Some useful links
+
+1. playwright setup https://nextjs.org/docs/pages/building-your-application/testing/playwright

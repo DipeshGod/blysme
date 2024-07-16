@@ -12,7 +12,12 @@ export function VerificationCode({
   handleChange: (newValue: string) => unknown;
 }) {
   return (
-    <InputOTP maxLength={6} pattern={inputPattern} onChange={handleChange}>
+    <InputOTP
+      maxLength={6}
+      pattern={inputPattern}
+      onChange={handleChange}
+      data-testid="codeVerify"
+    >
       <InputOTPGroup>
         <InputOTPSlot index={0} />
         <InputOTPSlot index={1} />

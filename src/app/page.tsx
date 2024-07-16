@@ -23,6 +23,7 @@ const Home = () => {
             disabled={loading}
             className="px-10 bg-[#351e92] mb-5"
             onClick={handleSubmit}
+            data-testid="submitBtn"
           >
             SUBMIT
           </Button>
