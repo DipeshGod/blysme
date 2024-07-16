@@ -48,6 +48,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Some Useful Hints
 
 1. api folder inside "app" directory contains serverless api for serverside logic
+2. test are inside "tests" folder in root directory
 
 ### Some useful links
 
