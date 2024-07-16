@@ -4,9 +4,15 @@ import {
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 
-export function VerificationCode({ inputPattern }: { inputPattern: string }) {
+export function VerificationCode({
+  inputPattern,
+  handleChange,
+}: {
+  inputPattern: string;
+  handleChange: (newValue: string) => unknown;
+}) {
   return (
-    <InputOTP maxLength={6} pattern={inputPattern}>
+    <InputOTP maxLength={6} pattern={inputPattern} onChange={handleChange}>
       <InputOTPGroup>
         <InputOTPSlot index={0} />
         <InputOTPSlot index={1} />
