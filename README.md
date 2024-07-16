@@ -24,6 +24,18 @@ pnpm dev
 bun dev
 ```
 
+#### 3. To run test
+
+First start dev server
+
+And,
+
+```bash
+npm run test
+# or
+pnpm run test
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ### 3. Tech stack used
